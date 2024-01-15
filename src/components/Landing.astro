@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import myBackground from "../assets/background.webp";
+---
+
+<div class="relative">
+  <Image
+    class="w-full max-h-screen object-cover"
+    src={myBackground}
+    alt="Restaurant with wooden tables, chairs and plants as decor."
+  />
+  <div
+    class="absolute w-full inset-0 flex bg-black/40 flex-col justify-center items-center text-white"
+  >
+    <h1 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+      Welcome Casa Real
+    </h1>
+    <p
+      class="mx-auto max-w-prose text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+    >
+      We provide the best Mexican food in town
+    </p>
+    <a
+      class="inline-flex mt-3 items-center justify-center h-10 px-5 text-sm font-medium text-white bg-red-600 rounded-full hover:bg-red-700"
+      href="/menu"
+    >
+      View Menu
+    </a>
+  </div>
+</div>

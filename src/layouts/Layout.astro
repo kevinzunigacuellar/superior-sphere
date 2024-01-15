@@ -1,0 +1,53 @@
+---
+import { defaultMeta } from "../constants";
+import Navigation from "../components/Navigation.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = defaultMeta.title, description = defaultMeta.description } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="w-full h-full">
+  <head>
+    <!-- high priority metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document</title>
+    <!-- extra metadata -->
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href="canonical_url" />
+    <!-- fonts preloads -->
+    <!-- low priority metadata -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- open graph metadata -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={defaultMeta.name} />
+    <meta property="og:image" content="" />
+    <meta property="og:image:alt" content="" />
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@example_twitter" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:image:alt" content="alt_description" />
+  </head>
+  <body class="w-full h-full relative">
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
