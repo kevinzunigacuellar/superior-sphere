@@ -5,4 +5,27 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <Landing />
+  <section class="flex flex-col items-center py-10 sm:py-20 px-4 max-w-6xl mx-auto">
+    <span class="bg-red-600 text-white inline-block text-sm px-3 py-1 rounded-md text-center">Popular dishes</span>
+    <h2 class="text-3xl mt-1 font-bold tracking-tighter md:text-4xl/tight">
+      Our costumer's favorites
+    </h2>
+    <p class="text-gray-600">
+      Discover our most popular dishes and desserts.
+    </p>
+    <ul class="grid grid-cols-3 mt-10 gap-6">
+      <li>
+        <img class="rounded-md" src="https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg">
+        <p class="font-semibold text-xl my-3">Burritos</p>
+      </li>
+      <li>
+        <img class="rounded-md" src="https://images.pexels.com/photos/4955210/pexels-photo-4955210.jpeg">
+        <p class="font-semibold text-xl my-3">Quesadillas</p>
+      </li>
+      <li>
+        <img class="rounded-md" src="https://images.pexels.com/photos/9213936/pexels-photo-9213936.jpeg">
+        <p class="font-semibold text-xl my-3">Enchiladas</p>
+      </li>
+    </ul>
+  </section>
 </Layout>
