@@ -41,19 +41,19 @@ export function MobileNav() {
       <Show when={open()}>
         <div class="px-2 pt-2 pb-4 grid grid-cols-1 gap-1 bg-gray-900">
           <a
-            href="#"
+            href="/"
             class="block rounded px-2 py-1 text-white hover:bg-gray-800"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/menu"
             class="block rounded px-2 py-1 text-white hover:bg-gray-800"
           >
             Menu
           </a>
           <a
-            href="#"
+            href="/photos"
             class="block rounded px-2 py-1 text-white hover:bg-gray-800"
           >
             Photos
