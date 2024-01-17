@@ -3,10 +3,13 @@ import { MobileNav } from "./MobileNav";
 ---
 
 <MobileNav client:visible />
-<nav class="fixed top-0 w-full z-10 text-white">
+<nav class="w-full z-10 text-white" class:list={{
+  "fixed top-0": Astro.url.pathname === "/",
+  "relative bg-gray-900": Astro.url.pathname !== "/",
+}}>
   <div class="hidden md:flex items-center justify-between px-4 py-4 max-w-6xl mx-auto">
     <span class="font-bold text-lg">Casa Real</span>
-    <div class="flex gap-6 items-center">
+    <div class="flex gap-4 items-center">
       <a
         href="/"
         class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
