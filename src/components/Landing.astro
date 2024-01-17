@@ -1,12 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import myBackground from "../assets/background.webp";
 ---
 
 <div class="relative">
-  <Image
+  <img
     class="w-full max-h-screen object-cover"
-    src={myBackground}
+    src={myBackground.src}
     alt="Restaurant with wooden tables, chairs and plants as decor."
   />
   <div
