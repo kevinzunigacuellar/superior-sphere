@@ -8,10 +8,38 @@ export const defaultMeta = {
   url: "https://casa-real-mexican-restaurant.vercel.app/",
 };
 
+export const popularDishes = [
+  {
+    title: "Burritos",
+    href: "/menu#burritos",
+    img : {
+      src: "https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg",
+      alt: "two burritos and a salad",
+    }
+  },
+  {
+    title: "Quesadillas",
+    href: "/menu#quesadillas",
+    img : {
+      src: "https://images.pexels.com/photos/4955210/pexels-photo-4955210.jpeg",
+      alt: "four quesadillas in a plate",
+    }
+  },
+  {
+    title: "Enchiladas",
+    href: "/menu#enchiladas",
+    img : {
+      src: "https://images.pexels.com/photos/9213936/pexels-photo-9213936.jpeg",
+      alt: "two enchiladas in a plate",
+    }
+  },
+
+]
+
 export const menu = [
   {
-    category: "Appetizers",
-    href: "#appetizers",
+    label: "Appetizers",
+    id: "appetizers",
     items: [
       {
         name: "Guacamole dip",
@@ -64,8 +92,8 @@ export const menu = [
     ],
   },
   {
-    category: "Salads",
-    href: "#salads",
+    label: "Salads",
+    id: "salads",
     items: [
       {
         name: "Casa real salad",
@@ -98,8 +126,8 @@ export const menu = [
     ],
   },
   {
-    category: "Nachos",
-    href: "#nachos",
+    label: "Nachos",
+    id: "nachos",
     items: [
       {
         name: "Nachos supremos",
@@ -120,8 +148,8 @@ export const menu = [
     ],
   },
   {
-    category: "House Specialties",
-    href: "#house-specialties",
+    label: "House Specialties",
+    id: "house-specialties",
     items: [
       {
         name: "Dinner special",
@@ -170,8 +198,8 @@ export const menu = [
     ],
   },
   {
-    category: "Quesadillas",
-    href: "#quesadillas",
+    label: "Quesadillas",
+    id: "quesadillas",
     items: [
       {
         name: "Quesadillas mexicanas",
@@ -205,8 +233,8 @@ export const menu = [
     ],
   },
   {
-    category: "Enchiladas",
-    href: "#enchiladas",
+    label: "Enchiladas",
+    id: "enchiladas",
     items: [
       {
         name: "Enchiladas supremas",
@@ -231,8 +259,8 @@ export const menu = [
     ],
   },
   {
-    category: "Tacos",
-    href: "#tacos",
+    label: "Tacos",
+    id: "tacos",
     items: [
       {
         name: "Avocado tacos",
@@ -265,8 +293,8 @@ export const menu = [
     ],
   },
   {
-    category: "Burritos",
-    href: "#burritos",
+    label: "Burritos",
+    id: "burritos",
     items: [
       {
         name: "Burritos mexicanos",
@@ -326,8 +354,8 @@ export const menu = [
     ],
   },
   {
-    category: "Steak",
-    href: "#steak",
+    label: "Steak",
+    id: "steak",
     items: [
       {
         name: "Carne asada",
@@ -352,8 +380,8 @@ export const menu = [
     ],
   },
   {
-    category: "Chicken",
-    href: "#chicken",
+    label: "Chicken",
+    id: "chicken",
     items: [
       {
         name: "El tapatío",
@@ -378,8 +406,8 @@ export const menu = [
     ],
   },
   {
-    category: "Fajitas",
-    href: "#fajitas",
+    label: "Fajitas",
+    id: "fajitas",
     items: [
       {
         name: "Fajitas",
@@ -399,8 +427,8 @@ export const menu = [
     ],
   },
   {
-    category: "Seafood",
-    href: "#seafood",
+    label: "Seafood",
+    id: "seafood",
     items: [
       {
         name: "Coctel de camarón",
@@ -436,8 +464,8 @@ export const menu = [
     ],
   },
   {
-    category: "Lunch Specials",
-    href: "#lunch-specials",
+    label: "Lunch Specials",
+    id: "lunch-specials",
     items: [
       {
         name: "Speed gonzales",
@@ -515,8 +543,8 @@ export const menu = [
     ],
   },
   {
-    category: "Desserts",
-    href: "#desserts",
+    label: "Desserts",
+    id: "desserts",
     items: [
       {
         name: "Combo casa real",
@@ -545,8 +573,8 @@ export const menu = [
     ],
   },
   {
-    category: "Kids Menu",
-    href: "#kids-menu",
+    label: "Kids Menu",
+    id: "kids-menu",
     items: [
       {
         name: "Macaroni and cheese",
