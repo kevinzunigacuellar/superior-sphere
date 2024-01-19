@@ -1,40 +1,41 @@
 ---
 import { MobileNav } from "./MobileNav";
+import { navLinks } from "../constants";
 ---
 
 <MobileNav client:visible />
-<nav class="w-full z-10 text-white" class:list={{
-  "fixed top-0": Astro.url.pathname === "/",
-  "relative bg-gray-900": Astro.url.pathname !== "/",
-}}>
-  <div class="hidden md:flex items-center justify-between px-4 py-4 max-w-6xl mx-auto">
+<header
+  class="w-full z-10 text-white"
+  class:list={{
+    "fixed top-0 sticky-animation": Astro.url.pathname === "/",
+    "relative bg-gray-900": Astro.url.pathname !== "/",
+  }}
+>
+  <div
+    class="hidden md:flex items-center justify-between px-4 py-4 max-w-6xl mx-auto"
+  >
     <span class="font-bold text-lg">Casa Real</span>
-    <div class="flex gap-4 items-center">
+    <nav class="flex gap-4 items-center">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
+          >
+            {link.name}
+          </a>
+        ))
+      }
       <a
-        href="/"
-        class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
-        >Home</a
-      >
-      <a
-        href="/menu"
-        class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
-        >Menu</a
-      >
-      <a
-        href="/menu"
-        class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
-        >Photos</a
-      >
-      <a
-        class="font-semibold hover:bg-amber-500 underline-offset-4 px-4 py-1 rounded-md bg-yellow-400 text-yellow-900"
+        class="font-semibold hover:bg-red-600 px-4 py-1 rounded-md bg-red-500"
         href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=49adb6a9-2b65-4566-b549-cfbf9ca9a76f&restaurant_uid=3514ab58-fda5-4cce-a6ab-9f9dcbd6c7d8&facebook=true"
         >Order Now</a
       >
-    </div>
+    </nav>
   </div>
-</nav>
+</header>
 <style>
-  nav {
+  .sticky-animation {
     animation: blur linear both;
     animation-timeline: scroll();
     animation-range: 0 200px;
