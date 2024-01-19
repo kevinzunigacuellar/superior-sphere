@@ -17,6 +17,9 @@ dependencies:
   astro:
     specifier: ^4.1.2
     version: 4.1.2(typescript@5.3.3)
+  photoswipe:
+    specifier: ^5.4.3
+    version: 5.4.3
   solid-js:
     specifier: ^1.8.11
     version: 1.8.11
@@ -3040,6 +3043,11 @@ packages:
 
   /path-to-regexp@6.2.1:
     resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
+    dev: false
+
+  /photoswipe@5.4.3:
+    resolution: {integrity: sha512-9UC6oJBK4oXFZ5HcdlcvGkfEHsVrmE4csUdCQhEjHYb3PvPLO3PG7UhnPuOgjxwmhq5s17Un5NUdum01LgBDng==}
+    engines: {node: '>= 0.12.0'}
     dev: false
 
   /picocolors@1.0.0:
