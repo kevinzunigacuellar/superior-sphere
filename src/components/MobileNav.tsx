@@ -1,4 +1,5 @@
-import { Show, createSignal } from "solid-js";
+import { Show, createSignal, For } from "solid-js";
+import { navLinks } from "../constants";
 
 export function MobileNav() {
   const [open, setOpen] = createSignal(false);
@@ -7,17 +8,13 @@ export function MobileNav() {
     setOpen(!open());
   };
   return (
-    <>
-      <div class="md:hidden flex items-center justify-between px-4 py-3 bg-gray-900 text-white">
+    <div class="text-white md:hidden bg-gray-950">
+      <div class="flex items-center justify-between px-4 py-3">
         <span class="font-semibold">Casa Real</span>
         <button class="block" onclick={handleClick}>
           <svg
-            class="block h-6 w-6"
-            fill="none"
+            class="block h-6 w-6 fill-none stroke-[1.5px] stroke-current"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
           >
             <Show
               when={open()}
@@ -39,27 +36,19 @@ export function MobileNav() {
         </button>
       </div>
       <Show when={open()}>
-        <div class="px-2 pt-2 pb-4 grid grid-cols-1 gap-1 bg-gray-900">
-          <a
-            href="/"
-            class="block rounded px-2 py-1 text-white hover:bg-gray-800"
-          >
-            Home
-          </a>
-          <a
-            href="/menu"
-            class="block rounded px-2 py-1 text-white hover:bg-gray-800"
-          >
-            Menu
-          </a>
-          <a
-            href="/photos"
-            class="block rounded px-2 py-1 text-white hover:bg-gray-800"
-          >
-            Photos
-          </a>
+        <div class="px-2 pb-3 pt-2 grid grid-cols-1 gap-1 bg-gray-950">
+          <For each={navLinks}>
+            {(link) => (
+              <a
+                href={link.href}
+                class="block rounded px-2 py-1 text-white hover:bg-gray-800"
+              >
+                {link.name}
+              </a>
+            )}
+          </For>
         </div>
       </Show>
-    </>
+    </div>
   );
 }
