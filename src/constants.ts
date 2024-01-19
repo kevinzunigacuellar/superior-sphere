@@ -8,6 +8,17 @@ export const defaultMeta = {
   url: "https://casa-real-mexican-restaurant.vercel.app/",
 };
 
+export const navLinks = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Menu",
+    href: "/menu",
+  },
+];
+
 export const popularDishes = [
   {
     title: "Burritos",
