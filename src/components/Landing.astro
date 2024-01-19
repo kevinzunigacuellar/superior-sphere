@@ -2,28 +2,28 @@
 import myBackground from "../assets/background.webp";
 ---
 
-<div class="relative">
+<section class="relative">
   <img
     class="w-full max-h-screen object-cover"
     src={myBackground.src}
     alt="Restaurant with wooden tables, chairs and plants as decor."
   />
   <div
-    class="absolute w-full inset-0 flex bg-black/45 flex-col justify-center items-center text-white"
+    class="absolute w-full inset-0 flex flex-col justify-center items-center bg-black/45 text-white"
   >
     <h1 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
       Welcome Casa Real
     </h1>
     <p
-      class="mx-auto max-w-prose text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+      class="max-w-prose text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
     >
       We provide the best Mexican food in town
     </p>
     <a
-      class="inline-flex mt-3 items-center justify-center h-10 px-5 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700"
+      class="inline-flex mt-4 items-center justify-center h-10 px-5 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700"
       href="/menu"
     >
       View Menu
     </a>
   </div>
-</div>
+</section>
