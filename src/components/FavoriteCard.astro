@@ -13,7 +13,7 @@ const { title, img, href } = Astro.props;
 
 <li class="relative group transition-all">
   <div class="relative rounded-md overflow-hidden">
-    <img src={img.src} alt={img.alt} />
+    <img src={img.src} alt={img.alt} loading="lazy" />
     <div
       class="absolute inset-0 bg-black opacity-0 transition-opacity group-hover:opacity-20"
     >
