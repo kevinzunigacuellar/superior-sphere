@@ -11,7 +11,7 @@ interface Props {
 const { title, img, href } = Astro.props;
 ---
 
-<li class="relative group">
+<li class="relative group transition-all">
   <div class="relative rounded-md overflow-hidden">
     <img src={img.src} alt={img.alt} />
     <div
@@ -20,7 +20,7 @@ const { title, img, href } = Astro.props;
     </div>
   </div>
   <a
-    class="block font-semibold text-xl my-3 group-hover:underline underline-offset-4 before:absolute before:content:'' before:inset-0"
+    class="block group-hover:text-yellow-700 font-semibold text-xl my-3 before:absolute before:content:'' before:inset-0"
     href={href}>{title}</a
   >
 </li>

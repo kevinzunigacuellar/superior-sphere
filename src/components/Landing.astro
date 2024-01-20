@@ -1,26 +1,21 @@
 ---
-import myBackground from "../assets/background.webp";
+import myBackground from "../assets/comedor.webp";
 ---
 
 <section class="relative">
   <img
     class="w-full max-h-screen object-cover"
-    src={myBackground.src}
+    src="/comedor.webp"
     alt="Restaurant with wooden tables, chairs and plants as decor."
   />
   <div
     class="absolute w-full inset-0 flex flex-col justify-center items-center bg-black/45 text-white"
   >
-    <h1 class="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+    <h1 class="text-3xl font-bold tracking-tight md:text-4xl">
       Welcome Casa Real
     </h1>
-    <p
-      class="max-w-prose text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
-    >
-      We provide the best Mexican food in town
-    </p>
     <a
-      class="inline-flex mt-4 items-center justify-center h-10 px-5 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700"
+      class="inline-flex mt-3 items-center justify-center h-10 px-5 text-sm font-medium text-yellow-900 bg-yellow-400 rounded-md hover:bg-yellow-500 transition-colors"
       href="/menu"
     >
       View Menu

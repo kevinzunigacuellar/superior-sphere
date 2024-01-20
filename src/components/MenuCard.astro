@@ -1,0 +1,31 @@
+---
+import { formatPrice } from "../utils"
+interface Props {
+  name: string;
+  description: string | undefined;
+  price: number | Record<string, number | undefined>;
+}
+
+const { name, description, price } = Astro.props;
+const formattedPrice = formatPrice(price);
+---
+<li class="flex flex-col sm:flex-row gap-6">
+  <a
+    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+    id="photo"
+    class="w-full sm:max-w-xs shrink-0"
+    data-pswp-height="1800"
+    data-pswp-width="2500"
+  >
+    <img
+      src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-400.jpg"
+      class="block w-full h-auto object-cover"
+      alt="thumbnail"
+    />
+  </a>
+  <div class="flex flex-col justify-center">
+    <p>{name}</p>
+    {description && <p class="max-w-prose">{description}</p>}
+    <p>{formattedPrice}</p>
+  </div>
+</li>

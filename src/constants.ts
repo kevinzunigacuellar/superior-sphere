@@ -21,26 +21,26 @@ export const navLinks = [
 
 export const popularDishes = [
   {
-    title: "Burritos",
-    href: "/menu#burritos",
+    title: "Fajitas",
+    href: "/menu#fajitas",
     img : {
-      src: "https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg",
-      alt: "two burritos and a salad",
+      src: "/fajitas.webp",
+      alt: "fajitas on a sizzling plate",
     }
   },
   {
-    title: "Quesadillas",
-    href: "/menu#quesadillas",
+    title: "Mojitos",
+    href: "/menu#mojitos",
     img : {
-      src: "https://images.pexels.com/photos/4955210/pexels-photo-4955210.jpeg",
-      alt: "four quesadillas in a plate",
+      src: "/mojito.webp",
+      alt: "mojito in a glass",
     }
   },
   {
     title: "Enchiladas",
     href: "/menu#enchiladas",
     img : {
-      src: "https://images.pexels.com/photos/9213936/pexels-photo-9213936.jpeg",
+      src: "/enchiladas.webp",
       alt: "two enchiladas in a plate",
     }
   },
@@ -66,10 +66,12 @@ export const menu = [
       },
       {
         name: "Queso fundido",
+        description: "Melted cheese with chorizo (Mexican sausage)",
         price: 825,
       },
       {
         name: "Fiesta fries",
+        description: "A bed of french fries with bacon and cheese sauce. Topped with your choice of protein and drizzled with sour cream and our homemade chipotle sauce",
         price: {
           chicken: 1299,
           steak: 1399,
@@ -77,6 +79,7 @@ export const menu = [
       },
       {
         name: "Quesadilla casa real",
+        description: "Steak, chicken, chorizo (Mexican sausage), or vegetarian, topped with cheese in a grilled flour tortilla. Served with lettuce, pico de gallo, and sour cream",
         price: {
           chicken: 1275,
           steak: 1425,
@@ -86,20 +89,25 @@ export const menu = [
       },
       {
         name: "Appetizer casa real",
+        description: "Samples of taquitos, tostadas, jalapeño poppers, and cheese quesadilla on a bed of lettuce. Served with sour cream and tomatoes",
         price: 1325,
       },
       {
         name: "Jalapeño poppers",
+        description: "Six jalapeño stuffed with cheddar cheese. Served on a bed of lettuce with sour cream and tomatoes on top",
         price: 875,
       },
       {
         name: "Wings",
+        description: "Ten wings tossed in your sauce of choice: plain, BBQ, buffalo, or mango habanero. Served with celery, blue cheese or ranch dressing",
         price: 1499,
       },
       {
         name: "Street corn",
+        description: "Grilled sweet corn on the cob. Topped with our homemade chipotle sauce, mayo, parmesan cheese, and tajin",
         price: 899,
       },
+      
     ],
   },
   {
@@ -108,6 +116,7 @@ export const menu = [
     items: [
       {
         name: "Casa real salad",
+        description: "Grilled chicken, steak, or shrimp, served on a bed of lettuce with tomatoes, shredded cheese, and slices of avocado",
         price: {
           chicken: 1175,
           steak: 1299,
@@ -116,6 +125,7 @@ export const menu = [
       },
       {
         name: "Casa real bowl",
+        description: "Burrito bowl loaded with your choice of protein, black beans, rice, lettuce, sour cream, fresh jalapeños, pico de gallo and schredded cheese",
         price: {
           chicken: 1250,
           ground_beef: 1250,
@@ -127,6 +137,7 @@ export const menu = [
       },
       {
         name: "Chipotle bowl",
+        description: "Burrito bowl loaded with protein of your preference, with black beans, rice, lettuce, pico de gallo, and shredded cheese",
         price: {
           grilled_chicken: 1450,
           steak: 1600,
@@ -142,6 +153,7 @@ export const menu = [
     items: [
       {
         name: "Nachos supremos",
+        description: "Toasted corn tortilla chips, covered with a delicious blend of melted cheese, beef, chicken, and beans. Covered with lettuce, tomatoes, and sour cream",
         price: 1450,
       },
       {
@@ -150,7 +162,7 @@ export const menu = [
           cheese: 850,
           beans: 850,
           grilled_chicken: 1275,
-          shrimp_nachos: 1550,
+          shrimp: 1550,
           chicken: 975,
           ground_beef: 975,
           steak: 1225,
@@ -164,18 +176,22 @@ export const menu = [
     items: [
       {
         name: "Dinner special",
+        description: "Cannot decide? This dinner has a little of everything. One chalupa with cream salad, one chile relleno, one beef taco, one enchilada, and one ground beef burrito served with rice and beans",
         price: 1925,
       },
       {
         name: "Taquitos mexicanos",
+        description: "Four fried flautas: two shredded beef and two chicken served with lettuce, sour cream and rice",
         price: 1225,
       },
       {
         name: "Taco salad",
+        description: "A crispy flour shell tortilla filled with ground beef or chicken, beans, lettuce, tomatoes, cheese, and sour cream",
         price: 1175,
       },
       {
         name: "Taco salad fajita",
+        description: "A crispy fried flour shell tortilla served with grilled chicken or steak, onions, bell peppers, tomatoes and beans. Topped with lettuce, cheese, sliced tomatoes and sour cream",
         price: {
           chicken: 1275,
           steak: 1350,
@@ -183,15 +199,18 @@ export const menu = [
         },
       },
       {
-        name: "Chimichanga",
+        name: "Chimichangas",
+        description: "Two chimichangas: one chicken and one beef tips, topped with cheese sauce and mild red ranchero sauce, Served with lettuce, sour cream, beans and rice",
         price: 1299,
       },
       {
         name: "Carnitas",
+        description: "Fried pork chunks served with rice, beans, lettuce, sour cream, tomatoes, cheese and three flour tortillas",
         price: 1599,
       },
       {
         name: "Nachos fajitas",
+        description: "Nacho chips covered in a blend of melted cheese, grilled chicken or steak, bell peppers, onions, and tomatoes. Topped with lettuce, sour cream and pico de gallo",
         price: {
           chicken: 1299,
           steak: 1450,
@@ -200,10 +219,12 @@ export const menu = [
       },
       {
         name: "Molcajete",
+        description: "Steak, chicken, and shrimp grilled with bell peppers, onions, tomatoes, and pineapple. Topped with Monterrey Jack cheese and special read sauce, on a sizzling hot authentic Mexican molcajete. Served with rice, beans, sour cream, lettuce, pico de gallo, and three corn or flour tortillas",
         price: 2125,
       },
       {
         name: "Lalo's special",
+        description: "Grilled chicken breat with grilled onions, pineapple, bacon, and cheese sauce. Served with a side of rice, lettuce, sour cream, shredded cheese, tomato, and three flour tortillas",
         price: 1650,
       },
     ],
@@ -214,6 +235,7 @@ export const menu = [
     items: [
       {
         name: "Quesadillas mexicanas",
+        description: "Two flour tortillas grilled and stuffed cheese, one with shredded beef and beans, and one with chicken and refried beans served with lettuce, cheese, sour cream and tomatoes",
         price: 1250,
       },
       {

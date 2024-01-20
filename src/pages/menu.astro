@@ -1,7 +1,91 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { menu } from "../constants";
+import MenuCard from "../components/MenuCard.astro";
 ---
 
 <Layout>
-  <p>Something</p>
+  <section class="max-w-6xl mx-auto px-4">
+    <h1 class="text-3xl text-center py-10 font-bold tracking-tight md:text-4xl">
+      Menu
+    </h1>
+    <section class="flex gap-12 sticky top-1">
+      <div
+        id="tableOfContents"
+        class="hidden sm:block w-1/4 sticky top-6 self-start"
+      >
+        <ul>
+          {
+            menu.map((category) => (
+              <li>
+                <a href={"#" + category.id}>{category.label}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div id="body">
+        <div id="my-gallery" class="flex-1 grid grid-cols-1 gap-10">
+          {
+            menu.map((category) => (
+              <section id="category-section">
+                <h2 id={category.id} class="font-bold text-2xl">
+                  {category.label}
+                </h2>
+                <ul class="grid grid-cols-1 gap-4 mt-4 sm:mt-6">
+                  {category.items.map((item) => (
+                    <MenuCard name={item.name} price={item.price} description={item.description} />
+                  ))}
+                </ul>
+              </section>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </section>
 </Layout>
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import "photoswipe/style.css";
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#my-gallery",
+    children: "#photo",
+    showHideAnimationType: "fade",
+    pswpModule: () => import("photoswipe"),
+  });
+  lightbox.init();
+
+  const setCurrent: IntersectionObserverCallback = (entries) => {
+    for (const { target, isIntersecting } of entries) {
+      const id = target.querySelector("h2")?.id;
+      const navItem = document.querySelector(
+        `#tableOfContents a[href="#${id}"]`
+      );
+
+      if (isIntersecting) {
+        navItem!.setAttribute("aria-current", "page");
+      } else {
+        navItem!.removeAttribute("aria-current");
+      }
+    }
+  };
+
+  const toObserve = document.querySelectorAll("#category-section");
+  let observer: IntersectionObserver | undefined;
+  const observe = () => {
+    if (observer) observer.disconnect();
+    observer = new IntersectionObserver(setCurrent);
+    toObserve.forEach((section) => {
+      observer!.observe(section);
+    });
+  };
+
+  observe();
+</script>
+<style>
+  #tableOfContents [aria-current] {
+    font-weight: bold;
+  }
+</style>
