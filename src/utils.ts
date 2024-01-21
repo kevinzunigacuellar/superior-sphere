@@ -1,4 +1,6 @@
-export function formatPrice(price: number | Record<string, number | undefined>) {
+export function formatPrice(
+  price: number | Record<string, number | undefined>,
+) {
   if (typeof price === "number") {
     price = price / 100;
     return price.toLocaleString("en-US", {

@@ -19,28 +19,28 @@ const { headings } = Astro.props;
   }
 </ul>
 <script>
-  const toObserve = document.querySelectorAll(
-    "a"
-  );
+  const toObserve = document.querySelectorAll("a");
 
   const setCurrent: IntersectionObserverCallback = (entries) => {
-			for (const { isIntersecting, target } of entries) {
-				if (!isIntersecting) continue;
-				const heading = getElementHeading(target);
-				if (!heading) continue;
-				const link = links.find((link) => link.hash === '#' + encodeURIComponent(heading.id));
-				if (link) {
-					this.current = link;
-					break;
-				}
-			}
-		};
+    for (const { isIntersecting, target } of entries) {
+      if (!isIntersecting) continue;
+      const heading = getElementHeading(target);
+      if (!heading) continue;
+      const link = links.find(
+        (link) => link.hash === "#" + encodeURIComponent(heading.id),
+      );
+      if (link) {
+        this.current = link;
+        break;
+      }
+    }
+  };
 
   let observer: IntersectionObserver | undefined;
   const observe = () => {
     if (observer) observer.disconnect();
     observer = new IntersectionObserver(setCurrent, {
-      rootMargin: '20px'
+      rootMargin: "20px",
     });
     toObserve.forEach((h) => observer!.observe(h));
   };

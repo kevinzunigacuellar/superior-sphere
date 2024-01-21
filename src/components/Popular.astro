@@ -4,19 +4,21 @@ import FavoriteCard from "./FavoriteCard.astro";
 ---
 
 <section
-  class="flex w-full flex-col items-center py-14 sm:py-20 px-4 justify-center max-w-6xl mx-auto"
+  class="flex w-full flex-col items-center py-12 md:py-20 px-4 justify-center max-w-6xl mx-auto"
 >
   <span
     class="inline-block text-sm bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-center"
     >Popular dishes</span
   >
-  <h2 class="text-3xl mt-2 font-bold tracking-tighter md:text-4xl/tight">
+  <h2
+    class="text-3xl text-pretty text-center mt-3 font-bold tracking-tighter md:text-4xl"
+  >
     Our costumer's favorites
   </h2>
-  <p class="text-gray-600 mt-1">
+  <p class="text-gray-600 mt-2 text-pretty max-w-prose text-center">
     Discover the most popular dishes in our restaurant
   </p>
-  <ul class="grid grid-cols-1 sm:grid-cols-3 mt-6 sm:mt-10 gap-6">
+  <ul class="grid grid-cols-1 md:grid-cols-3 mt-6 md:mt-12 gap-8">
     {
       popularDishes.map((dish) => (
         <FavoriteCard title={dish.title} href={dish.href} img={dish.img} />

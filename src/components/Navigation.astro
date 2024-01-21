@@ -1,9 +1,7 @@
 ---
-import { MobileNav } from "./MobileNav";
 import { navLinks } from "../constants";
 ---
 
-<MobileNav client:visible />
 <header
   class="w-full z-10 text-white"
   class:list={{
@@ -11,10 +9,8 @@ import { navLinks } from "../constants";
     "relative bg-gray-900": Astro.url.pathname !== "/",
   }}
 >
-  <div
-    class="hidden md:flex items-center justify-end px-4 py-4 max-w-6xl mx-auto"
-  >
-    <nav class="flex gap-4 items-center">
+  <div class="flex items-center justify-end p-4 max-w-6xl mx-auto">
+    <nav class="flex gap-2 sm:gap-4 items-center flex-wrap">
       {
         navLinks.map((link) => (
           <a

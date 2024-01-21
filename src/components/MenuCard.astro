@@ -1,5 +1,5 @@
 ---
-import { formatPrice } from "../utils"
+import { formatPrice } from "../utils";
 interface Props {
   name: string;
   description: string | undefined;
@@ -9,6 +9,7 @@ interface Props {
 const { name, description, price } = Astro.props;
 const formattedPrice = formatPrice(price);
 ---
+
 <li class="flex flex-col sm:flex-row gap-6">
   <a
     href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
