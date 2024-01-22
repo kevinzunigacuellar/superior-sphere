@@ -6,7 +6,7 @@ import { navLinks } from "../constants";
   class="w-full z-10 text-white"
   class:list={{
     "fixed top-0 sticky-animation": Astro.url.pathname === "/",
-    "relative bg-gray-900": Astro.url.pathname !== "/",
+    "relative bg-stone-900": Astro.url.pathname !== "/",
   }}
 >
   <div class="flex items-center justify-end p-4 max-w-6xl mx-auto">
@@ -22,7 +22,7 @@ import { navLinks } from "../constants";
         ))
       }
       <a
-        class="font-semibold hover:bg-yellow-300 px-4 py-1 rounded-md text-yellow-900 bg-yellow-400"
+        class="font-semibold hover:bg-amber-300 px-4 py-1 rounded-md text-amber-950 bg-amber-400"
         href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=49adb6a9-2b65-4566-b549-cfbf9ca9a76f&restaurant_uid=3514ab58-fda5-4cce-a6ab-9f9dcbd6c7d8"
         >Order Now</a
       >
@@ -38,7 +38,7 @@ import { navLinks } from "../constants";
 
   @keyframes blur {
     to {
-      background: rgba(0, 0, 0, 1);
+      @apply bg-stone-900;
       backdrop-filter: blur(12px);
     }
   }

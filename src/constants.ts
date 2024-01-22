@@ -8,6 +8,17 @@ export const defaultMeta = {
   url: "https://casa-real-mexican-restaurant.vercel.app/",
 };
 
+export const socialLinks = [
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/CasaRealMexicanRestaurant",
+  },
+  {
+    name: "DoorDash",
+    href: "https://www.doordash.com/store/casa-real-colchester-27477852/"
+  }
+]
+
 export const navLinks = [
   {
     name: "Home",

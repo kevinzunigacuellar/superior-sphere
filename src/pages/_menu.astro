@@ -34,7 +34,11 @@ import MenuCard from "../components/MenuCard.astro";
                 </h2>
                 <ul class="grid grid-cols-1 gap-4 mt-4 sm:mt-6">
                   {category.items.map((item) => (
-                    <MenuCard name={item.name} price={item.price} description={item.description} />
+                    <MenuCard
+                      name={item.name}
+                      price={item.price}
+                      description={item.description}
+                    />
                   ))}
                 </ul>
               </section>
@@ -61,7 +65,7 @@ import MenuCard from "../components/MenuCard.astro";
     for (const { target, isIntersecting } of entries) {
       const id = target.querySelector("h2")?.id;
       const navItem = document.querySelector(
-        `#tableOfContents a[href="#${id}"]`
+        `#tableOfContents a[href="#${id}"]`,
       );
 
       if (isIntersecting) {
