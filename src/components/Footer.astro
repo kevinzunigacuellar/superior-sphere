@@ -7,11 +7,31 @@ import { navLinks, socialLinks } from "../constants";
     <img src="/logo.webp" class="w-24 mx-auto sm:w-36 h-auto" />
     <div>
       <h2 class="text-amber-400 font-semibold">Links</h2>
-      <ul class="flex flex-col gap-2 mt-3 text-stone-400">{navLinks.map((link) => <li><a class="hover:text-neutral-300" href={link.href}>{link.name}</a></li>)}</ul>
+      <ul class="flex flex-col gap-2 mt-3 text-stone-400">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a class="hover:text-neutral-300" href={link.href}>
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
     <div>
       <h2 class="text-amber-400 font-semibold">Socials</h2>
-      <ul class="flex flex-col gap-2 mt-3 text-stone-400">{socialLinks.map((link) => <li><a class="hover:text-neutral-300" href={link.href}>{link.name}</a></li>)}</ul>
+      <ul class="flex flex-col gap-2 mt-3 text-stone-400">
+        {
+          socialLinks.map((link) => (
+            <li>
+              <a class="hover:text-neutral-300" href={link.href}>
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </div>
     <address class="not-italic text-stone-400">
       <h2 class="text-amber-400 font-semibold mb-3">Address</h2>

@@ -15,9 +15,9 @@ export const socialLinks = [
   },
   {
     name: "DoorDash",
-    href: "https://www.doordash.com/store/casa-real-colchester-27477852/"
-  }
-]
+    href: "https://www.doordash.com/store/casa-real-colchester-27477852/",
+  },
+];
 
 export const navLinks = [
   {

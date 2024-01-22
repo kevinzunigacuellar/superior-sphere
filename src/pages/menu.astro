@@ -6,33 +6,41 @@ import MenuCard from "../components/MenuCard.astro";
 
 <Layout>
   <section class="max-w-6xl mx-auto px-4">
-    <h1 class="text-3xl text-center py-10 font-bold tracking-tight md:text-4xl">
+    <h1 class="text-3xl text-center pt-20 font-bold tracking-tight md:text-4xl">
       Menu
     </h1>
-    <section class="flex gap-12 sticky top-1">
+    <p class="max-w-prose text-lg text-center pt-6 mx-auto text-stone-600">
+      Our delicious menu is available for dine-in, takeout, and delivery
+    </p>
+    <section class="flex gap-12 sticky top-1 pt-12">
       <div
         id="tableOfContents"
-        class="hidden sm:block w-1/4 sticky top-6 self-start"
+        class="hidden md:block w-1/4 sticky top-6 self-start min-w-60"
       >
-        <ul>
+        <ul class="grid grid-cols-1 gap-0.5 text-stone-600">
           {
             menu.map((category) => (
               <li>
-                <a href={"#" + category.id}>{category.label}</a>
+                <a
+                  class="block aria-[current]:bg-amber-400 aria-[current]:text-amber-950 aria-[current]:font-medium px-2 py-0.5 rounded"
+                  href={"#" + category.id}
+                >
+                  {category.label}
+                </a>
               </li>
             ))
           }
         </ul>
       </div>
-      <div id="body">
+      <div id="body" class="border p-8 bg-white rounded-md">
         <div id="my-gallery" class="flex-1 grid grid-cols-1 gap-10">
           {
             menu.map((category) => (
-              <section id="category-section">
-                <h2 id={category.id} class="font-bold text-2xl">
+              <section id="category-section" class="mb-10">
+                <h2 id={category.id} class="font-bold text-2xl scroll-m-4">
                   {category.label}
                 </h2>
-                <ul class="grid grid-cols-1 gap-4 mt-4 sm:mt-6">
+                <ul class="grid grid-cols-1 gap-8 mt-4">
                   {category.items.map((item) => (
                     <MenuCard
                       name={item.name}
@@ -68,10 +76,11 @@ import MenuCard from "../components/MenuCard.astro";
         `#tableOfContents a[href="#${id}"]`,
       );
 
+      if (!navItem) continue;
       if (isIntersecting) {
-        navItem!.setAttribute("aria-current", "page");
+        navItem.setAttribute("aria-current", "page");
       } else {
-        navItem!.removeAttribute("aria-current");
+        navItem.removeAttribute("aria-current");
       }
     }
   };
@@ -88,8 +97,3 @@ import MenuCard from "../components/MenuCard.astro";
 
   observe();
 </script>
-<style>
-  #tableOfContents [aria-current] {
-    font-weight: bold;
-  }
-</style>

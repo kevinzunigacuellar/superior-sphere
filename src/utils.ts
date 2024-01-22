@@ -9,16 +9,22 @@ export function formatPrice(
     });
   }
   const prices = Object.entries(price).map(([key, value]) => {
-    if (!value) return "";
+    if (!value) return { name: "", price: "" };
     value = value / 100;
     const priceUSD = value.toLocaleString("en-US", {
       style: "currency",
       currency: "USD",
     });
     key = key.replace("_", " ");
-
-    return key + ": " + priceUSD;
+    return {
+      name: key,
+      price: priceUSD,
+    };
   });
 
-  return prices.join(" | ");
+  return prices;
+}
+
+export function capitalize(str: string) {
+  return str[0].toUpperCase() + str.slice(1);
 }
