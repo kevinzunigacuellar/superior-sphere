@@ -12,14 +12,14 @@ const { name, description, price, imgSrc } = Astro.props;
 const formattedPrice = formatPrice(price);
 ---
 
-<li class="flex flex-col sm:flex-row gap-4">
+<li class="flex flex-col sm:flex-row gap-4 sm:gap-6">
   <a
     href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
     id="photo"
     data-pswp-height="1800"
     data-pswp-width="2500"
   >
-    <div class="w-80 h-auto rounded-md overflow-hidden">
+    <div class="w-full sm:w-64 h-auto rounded-md overflow-hidden">
       <img
         src={imgSrc ?? "/mojito.webp"}
         class="w-full h-full"
@@ -27,14 +27,18 @@ const formattedPrice = formatPrice(price);
       />
     </div>
   </a>
-  <div class="flex flex-col justify-center w-full gap-4">
+  <div class="flex flex-col justify-center w-full">
     <h3 class="font-semibold">{name}</h3>
-    {description && <p class="max-w-prose text-stone-600">{description}</p>}
+    {
+      description && (
+        <p class="max-w-prose text-stone-600 mt-2 sm:mt-3">{description}</p>
+      )
+    }
     {
       typeof formattedPrice === "string" ? (
-        <p class="text-stone-900 ">{formattedPrice}</p>
+        <p class="text-stone-900 mt-1.5 sm:mt-3">{formattedPrice}</p>
       ) : (
-        <ul class="text-stone-900">
+        <ul class="text-stone-900 mt-3">
           {formattedPrice.map(({ name, price }) => (
             <li class="flex justify-between">
               <span>{capitalize(name)}</span>

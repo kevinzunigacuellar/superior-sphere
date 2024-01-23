@@ -15,7 +15,7 @@ import MenuCard from "../components/MenuCard.astro";
     <section class="flex gap-12 sticky top-1 pt-12">
       <div
         id="tableOfContents"
-        class="hidden md:block w-1/4 sticky top-6 self-start min-w-60"
+        class="hidden md:block w-1/4 sticky top-6 self-start min-w-40"
       >
         <ul class="grid grid-cols-1 gap-0.5 text-stone-600">
           {
@@ -32,15 +32,15 @@ import MenuCard from "../components/MenuCard.astro";
           }
         </ul>
       </div>
-      <div id="body" class="border p-8 bg-white rounded-md">
-        <div id="my-gallery" class="flex-1 grid grid-cols-1 gap-10">
+      <div id="body" class="border p-6 sm:p-7 md:p-8 bg-white rounded-md">
+        <div id="my-gallery" class="flex-1 grid grid-cols-1 gap-12">
           {
             menu.map((category) => (
-              <section id="category-section" class="mb-10">
+              <section id="category-section">
                 <h2 id={category.id} class="font-bold text-2xl scroll-m-4">
                   {category.label}
                 </h2>
-                <ul class="grid grid-cols-1 gap-8 mt-4">
+                <ul class="grid grid-cols-1 gap-12 mt-4">
                   {category.items.map((item) => (
                     <MenuCard
                       name={item.name}
