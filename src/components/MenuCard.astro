@@ -19,10 +19,12 @@ const formattedPrice = formatPrice(price);
     data-pswp-height="1800"
     data-pswp-width="2500"
   >
-    <div class="w-full sm:w-64 h-auto rounded-md overflow-hidden">
+    <div
+      class="w-full sm:max-w-40 md:max-w-52 lg:max-w-64 h-auto rounded-md overflow-hidden"
+    >
       <img
         src={imgSrc ?? "/mojito.webp"}
-        class="w-full h-full"
+        class="w-full h-full object-cover"
         alt="thumbnail"
       />
     </div>
