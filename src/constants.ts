@@ -34,23 +34,23 @@ export const popularDishes = [
     title: "Fajitas",
     href: "/menu#fajitas",
     img: {
-      src: "/fajitas.webp",
+      src: "/src/assets/popular/fajitas.webp",
       alt: "fajitas on a sizzling plate",
     },
   },
   {
-    title: "Mojitos",
-    href: "/menu#mojitos",
+    title: "Desserts",
+    href: "/menu#desserts",
     img: {
-      src: "/mojito.webp",
-      alt: "mojito in a glass",
+      src: "/src/assets/popular/sopapilla.jpeg",
+      alt: "sopapilla",
     },
   },
   {
     title: "Enchiladas",
     href: "/menu#enchiladas",
     img: {
-      src: "/enchiladas.webp",
+      src: "/src/assets/popular/enchiladas.webp",
       alt: "two enchiladas in a plate",
     },
   },

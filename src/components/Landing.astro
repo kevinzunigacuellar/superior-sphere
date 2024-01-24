@@ -1,8 +1,14 @@
+---
+import backgroundImage from '../assets/comedor.webp'
+import { Image } from 'astro:assets';
+---
 <section class="relative">
   <h1 class="sr-only">Casa Real Mexican Restaurant</h1>
-  <img
+  <Image
     class="w-full h-svh object-cover object-center"
-    src="/comedor.webp"
+    src={backgroundImage}
+    densities={[1.5, 2]}
+    decoding="async"
     alt="Restaurant with tables, chairs and bar"
   />
   <div class="absolute w-full inset-0 bg-stone-900/35 text-white"></div>
