@@ -14,6 +14,9 @@ dependencies:
   "@astrojs/tailwind":
     specifier: ^5.1.0
     version: 5.1.0(astro@4.1.2)(tailwindcss@3.4.1)
+  "@fontsource-variable/brygada-1918":
+    specifier: ^5.0.17
+    version: 5.0.17
   astro:
     specifier: ^4.1.2
     version: 4.1.2(typescript@5.3.3)
@@ -816,6 +819,13 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/brygada-1918@5.0.17:
+    resolution:
+      {
+        integrity: sha512-qyK/mdvlOeS2qltCKuByL2ZKCCfQMX7WAHqZu0bpvlmhzcEIkKTbiIslcxKz4Ls0tAnIvMEcVtU8Ojtul37s8A==,
+      }
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution:

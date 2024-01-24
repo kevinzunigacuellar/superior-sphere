@@ -4,8 +4,7 @@ export const defaultMeta = {
   title: "Casa Real Mexican Restaurant",
   description:
     "Savor the best Mexican cuisine in Colchester, Vermont at our renowned restaurant. From flavorful tacos to mouthwatering guacamole, our Mexican restaurant delivers an unforgettable culinary experience. Join us for a fiesta of taste and hospitality, making us your go-to destination for the finest Mexican food in Vermont",
-  image: "/images/og-image.jpg",
-  ogImagePath: "./og.png",
+  ogImagePath: "og.png",
 };
 
 export const socialLinks = [
@@ -269,6 +268,8 @@ export const menu = [
       },
       {
         name: "Quesadillas de fajita",
+        description:
+          "Grilled quesadilla filled with your choice of meat, bell peppers, onions, tomatoes, and cheese, covered with cheese sauce. Served with lettuce, sour cream, tomato, refried beans, and rice",
         price: {
           chicken: 1450,
           steak: 1575,
@@ -278,18 +279,26 @@ export const menu = [
       },
       {
         name: "La gringa",
+        description:
+          "Grilled flour tortilla filled with cheese and al pastor meat with a small portion of cilantro, onion, lime, and our homemade spicy sauce. Served with a side of rice and beans",
         price: 1625,
       },
       {
         name: "Quesadilla Popeye's",
+        description:
+          "Quesadilla filled with cheese, grilled chicken, grilled onions, and spinach, Covered with cheese sauce. Served with rice, beans, and cream salad",
         price: 1575,
       },
       {
         name: "Quesabirrias",
+        description:
+          "Comprising birria-style cooked beef, folded into a flour tortilla with cheese. Served with a side of broth (consomé) for dipping, cilantro, onions, lime, and our homemade spicy sauce",
         price: 1599,
       },
       {
         name: "Quesadilla la chicken tips",
+        description:
+          "Flour tortilla filled with cheese and grilled chicken, covered in cheese sauce. Served with a side of rice and cream salad",
         price: 1325,
       },
     ],
@@ -300,22 +309,32 @@ export const menu = [
     items: [
       {
         name: "Enchiladas supremas",
+        description:
+          "A supreme combination featuring one chicken enchilada, one cheese enchilada, one bean enchilada, and one beef enchilada, Topped with mild red or green sauce, cheese, lettuce, tomato, and sour cream. Served with a side of rice",
         price: 1425,
       },
       {
         name: "Enchiladas rancheras",
+        description:
+          "Three cheese enchiladas topped with grilled pork, tomatoes, onions, and bell peppers. Covered with enchilada sauce. Served with lettuce and sour cream",
         price: 1425,
       },
       {
         name: "Enchiladas popeye's",
+        description:
+          "Three enchiladas filled with grilled chicken, grilled onions, and spinach. Topped with melted cheese with green or red sauce. Served with a side of rice and creamy salad",
         price: 1425,
       },
       {
         name: "Enchiladas acapulco",
+        description:
+          "Three shrimp enchiladas topped with mild red or green sauce, along with shredded cheese. Served with lettuce, tomatoes, sour cream, and a side of rice",
         price: 1599,
       },
       {
         name: "Yolanda's",
+        description:
+          "Three chicken enchiladas topped with cheese, your choice of green or red sauce, lettuce, sour cream, tomatoes. Served with a side of Spanish rice",
         price: 1399,
       },
     ],
@@ -326,30 +345,44 @@ export const menu = [
     items: [
       {
         name: "Avocado tacos",
+        description:
+          "Three flour or corn tortillas loaded with fresh avocado slices, topped with cilantro. Served with a side of rice, pico de gallo, and our homemade spicy sauce",
         price: 1275,
       },
       {
         name: "Carne asada tacos",
+        description:
+          "Three soft corn tortillas filled with tender steak. Served with a side of pico de gallo and our homemade spicy sauce",
         price: 1425,
       },
       {
         name: "Carnitas tacos",
+        description:
+          "Three soft corn tortillas filled with tender, slow-cooked shredded pork. Served with pico de gallo and spicy homemade sauce",
         price: 1425,
       },
       {
         name: "Fish tacos",
+        description:
+          "Three soft flour tortillas filled with lightly seasoned grilled fish and onions. Served with a side of rice, pico de gallo, and a creamy chipotle sauce",
         price: 1575,
       },
       {
         name: "Tacos al pastor",
+        description:
+          "The original Mexican fusion - guajillo and spices marinated pork, grilled with onions and pineapple. Served with a side of cilantro, onions, limes, and our homemade spicy tomatillo sauce",
         price: 1475,
       },
       {
         name: "Tacos supremos",
+        description:
+          "Three soft or hard shell tortilla tacos, filled with shredded chicken or ground beef, lettuce, tomato, sour cream, and shredded cheese",
         price: 1225,
       },
       {
         name: "Tacos de birria",
+        description:
+          "Three soft corn tortillas filled with birria-style cooked beef. Served with a side of broth (consomé) for dipping, cilantro, onions, lime, and homemade spicy sauce on the side",
         price: 1499,
       },
     ],
@@ -360,18 +393,20 @@ export const menu = [
     items: [
       {
         name: "Burritos mexicanos",
+        description:
+          "Two burritos: one chicken and beans and one beef tip and beans. Topped with a mild red sauce, shredded cheese, lettuce, tomato, and sour cream. Served with a side of rice",
         price: 1325,
       },
       {
         name: "Burritos típicos",
-        price: 1250,
-      },
-      {
-        name: "Burritos típicos",
+        description:
+          "Two beef tip burritos topped with our homemade cheese. Served with a side of beans and cream salad",
         price: 1250,
       },
       {
         name: "Burrito chipotle",
+        description:
+          "Extra large flour tortilla stuffed with your choice of protein, rice, black beans, lettuce, sour cream, and pico de gallo. Topped with our homemade chipotle sauce.",
         price: {
           veggies: 1525,
           chicken: 1499,
@@ -382,6 +417,8 @@ export const menu = [
       },
       {
         name: "Burrito california",
+        description:
+          "Extra large flour tortilla stuffed with your choice of protein with refried beans, rice, lettuce, pico de gallo, and sour cream. Topped with our homemade cheese sauce",
         price: {
           veggies: 1525,
           chicken: 1499,
@@ -392,6 +429,8 @@ export const menu = [
       },
       {
         name: "Burrito casa real",
+        description:
+          "Extra large flour tortilla stuffed with your choice of meat, black beans, rice, lettuce, sour cream, fresh jalapeños, and pico de gallo. Covered with melted cheese, red and green sauce",
         price: {
           veggies: 1525,
           chicken: 1499,
@@ -402,10 +441,14 @@ export const menu = [
       },
       {
         name: "Burrito popeye's",
+        description:
+          "Burrito stuffed with grilled chicken, grilled onions, and spinach, covered with melted cheese. Served with rice and beans on the side",
         price: 1325,
       },
       {
         name: "Skillet burrito",
+        description:
+          "This burrito is loaded with protein of your preference, rice, beans, tomato, and lettuce. Topped with cheese, sour cream, chipotle and ranchero sauce",
         price: {
           chicken: 1525,
           steak: 1725,
@@ -421,22 +464,32 @@ export const menu = [
     items: [
       {
         name: "Carne asada",
+        description:
+          "Tender grilled steak, served with rice, beans, cream salad, and three flour or corn tortillas",
         price: 1699,
       },
       {
         name: "Steak a la mexicana",
+        description:
+          "Ribeye steak grilled to order with bell peppers, onions, and tomatoes. Served with rice, beans, and three flour or corn tortillas",
         price: 1799,
       },
       {
         name: "Steak casa real",
+        description:
+          "Ribeye cooked with onions and mushrooms, topped with five grilled shrimps and cheese. Served with rice, beans, lettuce, sour cream, pico de gallo, and three flour or corn tortillas",
         price: 2050,
       },
       {
         name: "Steak oaxaca",
+        description:
+          "Ribeye steak cooked with bacon, poblano peppers, and cheese on top. Served with a side of rice, beans, lettuce, sour cream, tomato, and three flour or corn tortillas",
         price: 1899,
       },
       {
         name: "Steak maya",
+        description:
+          "A grilled tender steak with a mix of broccoli and cauliflower on top, Served with a side of rice, beans, cream salad, and flour or corn. tortillas",
         price: 1850,
       },
     ],
@@ -447,22 +500,32 @@ export const menu = [
     items: [
       {
         name: "El tapatío",
+        description:
+          "Chicken breast grilled with Mexican sausage, topped with melted cheese. Served with rice, lettuce, sour cream, and three flour or corn tortillas",
         price: 1599,
       },
       {
         name: "Pollo loco",
+        description:
+          "Tender sliced grilled chicken breast, topped with grilled onions and jalapeño. Served with rice, beans, lettuce, sour cream, tomatoes, and three flour or corn tortillas",
         price: 1499,
       },
       {
         name: "Pollo encremado",
+        description:
+          "Grilled chicken with mushrooms and onions, mixed with sour cream. Served with rice, tossed salad, and three tortillas on the side",
         price: 1575,
       },
       {
         name: "Pollo maya",
+        description:
+          "Grilled chicken breast covered with a special mix of broccoli, cauliflower, and zucchini. Served with rice, lettuce, tomatoes, sour cream, and three flour or corn tortillas",
         price: 1599,
       },
       {
         name: "Ángel",
+        description:
+          "One chicken burrito, one chicken enchilada, both topped with lettuce, sour cream, shredded cheese, and tomato. Served with a side of rice",
         price: 1299,
       },
     ],
@@ -473,6 +536,8 @@ export const menu = [
     items: [
       {
         name: "Fajitas",
+        description:
+          "All fajitas are grilled with protein of your preference, bell peppers, onions, and tomatoes. Served with a rice, beans, lettuce, sour cream, shredded cheese, pico de gallo, tomato, and three flour or corn tortillas",
         price: {
           chicken: 1650,
           steak: 1750,
@@ -494,22 +559,32 @@ export const menu = [
     items: [
       {
         name: "Coctel de camarón",
+        description:
+          "Our fabulous shrimp in a special Mexican cocktail sauce with raw onions, tomato, cilantro, lime juice, jalapeño peppers, and slices of avocado. Served with salted crackers on the side",
         price: 1800,
       },
       {
         name: "Veracruz plate",
+        description:
+          "Grilled shrimp cooked with mushrooms, onions, tomatoes, with melted cheese on top. Served with rice, beans, and three flour or corn tortillas",
         price: 1825,
       },
       {
         name: "Lago especial",
+        description:
+          "Grilled fish cooked with red bell peppers, onions, zucchini, broccoli, and cauliflower. Served with rice, sour cream, lettuce, tomato, and three flour or corn tortillas on the side",
         price: 1850,
       },
       {
         name: "Camarón yucatán",
+        description:
+          "Grilled shrimp cooked with red peppers, onions, zucchini, broccoli, and cauliflower. Served with rice, sour cream, lettuce, tomato, and three flour or corn tortillas on the side",
         price: 1825,
       },
       {
         name: "Rice with chicken or shrimp",
+        description:
+          "Grilled chicken or shrimp , served with rice, cream salad, and flour tortillas on the side",
         price: {
           chicken: 1225,
           shrimp: 1725,
@@ -517,10 +592,14 @@ export const menu = [
       },
       {
         name: "Brochetas",
+        description:
+          "Ten jumbo shrimps, stuffed with cheese, and sliced jalapeños, wrapped in bacon. Served on a bed of mixed veggies, rice, and charro beans",
         price: 1999,
       },
       {
         name: "Al pastor brochetas",
+        description:
+          "Marinated grilled pork cooked with pineapple and sautéed vegetables Served with rice and three flour or corn tortillas",
         price: 1899,
       },
     ],
@@ -530,11 +609,15 @@ export const menu = [
     id: "lunch-specials",
     items: [
       {
-        name: "Speed gonzales",
+        name: "Speedy gonzales",
+        description:
+          "One taco, one enchilada with red or green sauce on top. Served with your choice of rice or beans",
         price: 850,
       },
       {
         name: "Lunch chimichanga",
+        description:
+          "One flour tortilla filled with beef tips or chicken topped with cheese sauce and mild ranchero sauce. Served with lettuce, tomato, sour cream, Spanish rice, and beans",
         price: {
           beef: 975,
           chicken: 975,
@@ -542,35 +625,35 @@ export const menu = [
         },
       },
       {
-        name: "Burrito mexicano",
-        price: 850,
-      },
-      {
         name: "Huevos rancheros",
+        description:
+          "Three ranch style eggs (over hard) with sauce on top. Served with Spanish rice, beans, and tortillas",
         price: 899,
       },
       {
         name: "Huevos con chorizo",
+        description:
+          "Three scrambled eggs with Mexican sausage. Served with Spanish rice, beans, and three flour tortillas",
         price: 925,
       },
       {
         name: "El rancho",
+        description: "One chile relleno, one taco, beans, and cream salad",
         price: 1050,
       },
       {
         name: "Burrito especial",
-        price: 799,
-      },
-      {
-        name: "Burrito especial",
+        description: "One burrito, rice, and beans",
         price: 799,
       },
       {
         name: "Burrito and enchilada",
+        description: "One burrito, rice, and beans",
         price: 899,
       },
       {
         name: "Burrito verde",
+        description: "Pork tips with green sauce, rice, or beans",
         price: 950,
       },
       {
@@ -579,19 +662,13 @@ export const menu = [
       },
       {
         name: "El burrito alteño",
+        description: "One quesadilla, Mexican rice, and beans",
         price: 850,
       },
       {
         name: "Fajita lunch special",
-        price: {
-          chicken: 999,
-          steak: 1175,
-          pork: 1175,
-          shrimp: 1275,
-        },
-      },
-      {
-        name: "Fajita lunch special",
+        description:
+          "Your choice of grilled chicken or steak. Served with a side of rice, beans, sour cream salad, and three flour or corn tortillas",
         price: {
           chicken: 1025,
           steak: 1150,
@@ -600,6 +677,8 @@ export const menu = [
       },
       {
         name: "Flautas",
+        description:
+          "Two flautas, one with chicken and one with beef. Served with a side of rice, beans, and our signature cream salad",
         price: 925,
       },
     ],
@@ -610,26 +689,38 @@ export const menu = [
     items: [
       {
         name: "Combo casa real",
+        description:
+          "A mix of all of our desserts! Can't decide which to order? This ones for you!",
         price: 1299,
       },
       {
         name: "Fried ice cream",
+        description:
+          "A generous serving of ice cream coated in a crunchy coating, deep-fried then cradled in a cinnamon sugar dusted tortilla shell. Topped with whipped cream, drizzled with honey, chocolate sauce, caramel sauce, sprinkles, and cherry!",
         price: 825,
       },
       {
         name: "Fried cheesecake",
+        description:
+          "creamy cheesecake, wrapped in a flour tortilla, deep-fried to a golden brown, rolled in cinnamon sugar, drizzled with chocolate sauce, caramel sauce, honey, sprinkles and cherry. Served with a side of whipped cream",
         price: 799,
       },
       {
         name: "Churros",
+        description:
+          "The traditional Mexican light dough pastry fried to a crispy perfection. and sprinkled with a dusting of cinnamon sugar and drizzled with chocolate sauce, caramel sauce, honey, sprinkles, and cherry. Served with a side of whipped cream.",
         price: 675,
       },
       {
         name: "Sopapilla",
+        description:
+          "Our homemade traditional flour tortilla, fried to a golden brown and drizzled with chocolate sauce, caramel sauce, honey, sprinkles, and cherry",
         price: 599,
       },
       {
         name: "Flan",
+        description:
+          "A delicious traditional Mexican custard. Homemade, rich, and creamy, with a Smoot delicate sweetness. Drizzled with light chocolate and caramel sauce with sprinkles and a cherry. With a side of whipped cream",
         price: 599,
       },
     ],

@@ -1,6 +1,8 @@
 ---
 import { defaultMeta } from "../constants";
 import Navigation from "../components/Navigation.astro";
+// nice
+import "@fontsource-variable/brygada-1918";
 
 interface Props {
   title?: string;
@@ -48,7 +50,7 @@ const ogImageURL = new URL(defaultMeta.ogImagePath, Astro.url).href;
     <meta name="twitter:image" content={ogImageURL} />
     <meta name="twitter:image:alt" content="alt_description" />
   </head>
-  <body class="w-full h-full relative bg-stone-100">
+  <body class="w-full h-full relative bg-stone-100 font-serif">
     <Navigation />
     <main>
       <slot />

@@ -13,19 +13,20 @@ import MenuCard from "../components/MenuCard.astro";
       Menu
     </h1>
     <p class="max-w-prose text-lg text-center pt-6 mx-auto text-stone-600">
-      Our delicious menu is available for dine-in, takeout, and delivery
+      Explore a diverse menu of authentic Mexican dishes, meticulously crafted
+      with locally sourced, fresh ingredients.
     </p>
     <section class="flex md:gap-6 lg:gap-12 sticky top-1 pt-12">
       <div
         id="tableOfContents"
         class="hidden md:block w-1/4 sticky top-6 self-start min-w-40"
       >
-        <ul class="grid grid-cols-1 gap-0.5 text-stone-600">
+        <ul class="grid grid-cols-1 text-stone-600">
           {
             menu.map((category) => (
               <li>
                 <a
-                  class="block aria-[current]:bg-amber-400 aria-[current]:text-amber-950 aria-[current]:font-medium px-2 py-0.5 rounded"
+                  class="block aria-[current]:bg-amber-400 aria-[current]:text-amber-950 aria-[current]:font-semibold px-2 py-1"
                   href={"#" + category.id}
                 >
                   {category.label}
@@ -70,7 +71,6 @@ import MenuCard from "../components/MenuCard.astro";
     showHideAnimationType: "fade",
     pswpModule: () => import("photoswipe"),
   });
-  lightbox.init();
 
   const setCurrent: IntersectionObserverCallback = (entries) => {
     for (const { target, isIntersecting } of entries) {
@@ -99,4 +99,5 @@ import MenuCard from "../components/MenuCard.astro";
   };
 
   observe();
+  lightbox.init();
 </script>
