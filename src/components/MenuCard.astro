@@ -12,7 +12,7 @@ const { name, description, price, imgSrc } = Astro.props;
 const formattedPrice = formatPrice(price);
 ---
 
-<li class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+<li class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
   <a
     href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
     id="photo"
@@ -20,7 +20,7 @@ const formattedPrice = formatPrice(price);
     data-pswp-width="2500"
   >
     <div
-      class="w-full sm:max-w-40 md:max-w-52 lg:max-w-64 h-auto rounded-md overflow-hidden"
+      class="w-full sm:max-w-40 md:max-w-52 lg:max-w-72 h-auto rounded-md overflow-hidden"
     >
       <img
         src={imgSrc ?? "/mojito.webp"}
