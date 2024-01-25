@@ -1,31 +1,42 @@
 ---
 import { formatPrice, capitalize } from "../utils";
+import { Image, getImage } from "astro:assets";
 
 interface Props {
   name: string;
   description: string | undefined;
   price: number | Record<string, number | undefined>;
-  imgSrc?: string;
+  imgSrc: string;
 }
 
 const { name, description, price, imgSrc } = Astro.props;
 const formattedPrice = formatPrice(price);
+const menuImages = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/menu/*.{jpeg,jpg,png,webp}",
+);
+const fullSize = await getImage({
+  src: menuImages[imgSrc](),
+  format: "webp",
+});
 ---
 
 <li class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
   <a
-    href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
     id="photo"
-    data-pswp-height="1800"
-    data-pswp-width="2500"
+    href={fullSize.src}
+    data-pswp-height={fullSize.attributes.height}
+    data-pswp-width={fullSize.attributes.width}
   >
     <div
       class="w-full sm:max-w-40 md:max-w-52 lg:max-w-72 h-auto rounded-md overflow-hidden"
     >
-      <img
-        src={imgSrc ?? "/mojito.webp"}
+      <Image
+        src={menuImages[imgSrc]()}
+        densities={[1.5, 2]}
+        format="webp"
+        decoding="async"
         class="w-full h-full object-cover"
-        alt="thumbnail"
+        alt={name}
       />
     </div>
   </a>
