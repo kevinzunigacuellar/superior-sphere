@@ -768,10 +768,9 @@ export const menu = [
     items: [
       {
         name: "Combo casa real",
-        imgPath: "/src/assets/menu/combo_dessert.jpeg",
         description:
           "A mix of all of our desserts! Can't decide which to order? This ones for you!",
-        imgSrc: "/src/assets/menu/coming_soon.webp",
+        imgSrc: "/src/assets/menu/combo_dessert.jpeg",
         price: 1299,
       },
       {
