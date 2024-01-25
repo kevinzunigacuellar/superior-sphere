@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
@@ -11,7 +11,9 @@ interface Props {
 }
 
 const { title, img, href } = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/popular/*.{jpeg,jpg,png,webp}');
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/popular/*.{jpeg,jpg,png,webp}"
+);
 ---
 
 <li class="relative group transition-all">
@@ -21,9 +23,11 @@ const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/popular
     <Image
       class="object-cover object-bottom w-full h-full"
       src={images[img.src]()}
-      alt={img.alt}
+      densities={[1.5, 2]}
+      format="webp"
       loading="lazy"
-      format='webp'
+      format="webp"
+      alt={img.alt}
     />
     <div
       class="absolute inset-0 bg-stone-900 opacity-0 transition-opacity group-hover:opacity-20"

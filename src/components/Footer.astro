@@ -1,10 +1,20 @@
 ---
 import { navLinks, socialLinks } from "../constants";
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo.webp";
 ---
 
 <footer class="bg-stone-900 py-12 px-4">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto max-w-6xl">
-    <img src="/logo.webp" class="w-24 mx-auto sm:w-36 h-auto" />
+    <Image
+      class="w-24 mx-auto sm:w-36 h-auto"
+      src={logoImg}
+      densities={[1.5, 2]}
+      format="webp"
+      loading="lazy"
+      decoding="async"
+      alt=""
+    />
     <div>
       <h2 class="text-amber-400 font-semibold">Links</h2>
       <ul class="flex flex-col gap-2 mt-3 text-stone-400">
