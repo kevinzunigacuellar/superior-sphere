@@ -20,6 +20,9 @@ dependencies:
   '@fontsource-variable/brygada-1918':
     specifier: ^5.0.17
     version: 5.0.17
+  '@vercel/speed-insights':
+    specifier: ^1.0.8
+    version: 1.0.8
   astro:
     specifier: ^4.2.4
     version: 4.2.4(typescript@5.3.3)
@@ -1168,6 +1171,31 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: false
+
+  /@vercel/speed-insights@1.0.8:
+    resolution: {integrity: sha512-x1V9MHUMGkaNafmgY0qRbmbr+jfeU+Cvo5KgreeEGo63SFuBYRg9RS52GUJ9p82nEL6NBzc9HNru6fkcvufYcQ==}
+    requiresBuild: true
+    peerDependencies:
+      '@sveltejs/kit': ^1 || ^2
+      next: '>= 13'
+      react: ^18 || ^19
+      svelte: ^4
+      vue: ^3
+      vue-router: ^4
+    peerDependenciesMeta:
+      '@sveltejs/kit':
+        optional: true
+      next:
+        optional: true
+      react:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+      vue-router:
+        optional: true
     dev: false
 
   /@volar/kit@1.11.1(typescript@5.3.3):
