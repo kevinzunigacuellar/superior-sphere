@@ -1,5 +1,5 @@
 ---
-import { formatPrice, capitalize } from "../utils";
+import { formatPrice, capitalize } from "~/scripts/utils";
 import { Image, getImage } from "astro:assets";
 
 interface Props {
@@ -22,7 +22,7 @@ const fullSize = await getImage({
 
 <li class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
   <a
-    id="photo"
+    id="dish"
     href={fullSize.src}
     data-pswp-height={fullSize.attributes.height}
     data-pswp-width={fullSize.attributes.width}

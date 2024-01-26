@@ -1,14 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { menu } from "../constants";
-import MenuCard from "../components/MenuCard.astro";
+import Layout from "~/layouts/Layout.astro";
+import MenuContainer from "~/components/MenuContainer.astro";
+import TableOfContents from "~/components/TableOfContents.astro";
 ---
 
 <Layout
   title="Menu | Casa Real Mexican Restaurant"
   description="Explore a diverse menu of authentic Mexican dishes, meticulously crafted with locally sourced, fresh ingredients. Discover the perfect blend of tradition and local flair, elevating your dining experience with every bite"
 >
-  <section class="max-w-6xl mx-auto px-4 py-10">
+  <div class="max-w-6xl mx-auto px-4 py-10">
     <h1 class="text-3xl text-center pt-10 font-bold tracking-tight md:text-4xl">
       Menu
     </h1>
@@ -17,88 +17,9 @@ import MenuCard from "../components/MenuCard.astro";
       with locally sourced, fresh ingredients.
     </p>
     <section class="flex md:gap-6 lg:gap-12 sticky top-1 pt-12">
-      <div
-        id="tableOfContents"
-        class="hidden md:block w-1/4 sticky top-6 self-start min-w-40"
-      >
-        <ul class="grid grid-cols-1 text-stone-600">
-          {
-            menu.map((category) => (
-              <li>
-                <a
-                  class="block aria-[current]:bg-amber-400 hover:bg-amber-400 aria-[current]:text-amber-950 aria-[current]:font-semibold hover:text-amber-950 px-2 py-1"
-                  href={"#" + category.id}
-                >
-                  {category.label}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div id="body" class="border p-5 sm:p-7 md:p-8 bg-white rounded-md">
-        <div id="my-gallery" class="flex-1 grid grid-cols-1 gap-12">
-          {
-            menu.map((category) => (
-              <section id="category-section">
-                <h2 id={category.id} class="font-bold text-2xl scroll-m-4">
-                  {category.label}
-                </h2>
-                <ul class="grid grid-cols-1 gap-12 mt-4">
-                  {category.items.map((item) => (
-                    <MenuCard
-                      name={item.name}
-                      price={item.price}
-                      description={item.description}
-                      imgSrc={item.imgSrc}
-                    />
-                  ))}
-                </ul>
-              </section>
-            ))
-          }
-        </div>
-      </div>
+      <TableOfContents />
+      <MenuContainer />
     </section>
-  </section>
+  </div>
 </Layout>
-<script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
-  import "photoswipe/style.css";
-
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#my-gallery",
-    children: "#photo",
-    showHideAnimationType: "fade",
-    pswpModule: () => import("photoswipe"),
-  });
-
-  const setCurrent: IntersectionObserverCallback = (entries) => {
-    for (const { target, isIntersecting } of entries) {
-      const id = target.querySelector("h2")?.id;
-      const navItem = document.querySelector(
-        `#tableOfContents a[href="#${id}"]`,
-      );
-
-      if (!navItem) continue;
-      if (isIntersecting) {
-        navItem.setAttribute("aria-current", "page");
-      } else {
-        navItem.removeAttribute("aria-current");
-      }
-    }
-  };
-
-  const toObserve = document.querySelectorAll("#category-section");
-  let observer: IntersectionObserver | undefined;
-  const observe = () => {
-    if (observer) observer.disconnect();
-    observer = new IntersectionObserver(setCurrent);
-    toObserve.forEach((section) => {
-      observer!.observe(section);
-    });
-  };
-
-  observe();
-  lightbox.init();
-</script>
+<script src="../scripts/TableOfContents.ts"></script>
