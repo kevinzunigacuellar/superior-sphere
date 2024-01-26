@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://superior-sphere-khaki.vercel.app/sitemap-index.xml
+Sitemap: https://website-nine-pied.vercel.app/sitemap-index.xml
