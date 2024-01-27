@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://website-nine-pied.vercel.app/sitemap-index.xml
+Sitemap: https://www.casarealvt.com/sitemap-index.xml

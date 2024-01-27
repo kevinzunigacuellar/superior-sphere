@@ -5,7 +5,7 @@ import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://website-nine-pied.vercel.app/",
+  site: "https://www.casarealvt.com",
   adapter: vercel({
     webAnalytics: {
       enabled: true,
