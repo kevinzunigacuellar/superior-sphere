@@ -1,6 +1,6 @@
 ---
 import { menu } from "~/constants";
-import MenuCard from "./MenuCard.astro";
+import MenuCard from "~/components/MenuCard.astro";
 ---
 
 <div class="border p-5 sm:p-7 md:p-8 bg-white rounded-md">
@@ -30,12 +30,18 @@ import MenuCard from "./MenuCard.astro";
   import PhotoSwipeLightbox from "photoswipe/lightbox";
   import "photoswipe/style.css";
 
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#menu",
-    children: "#dish",
-    showHideAnimationType: "fade",
-    pswpModule: () => import("photoswipe"),
-  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
+    const loadPhotoswipe = () => {
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: "#menu",
+        children: "#dish",
+        showHideAnimationType: "fade",
+        pswpModule: () => import("photoswipe"),
+      });
 
-  lightbox.init();
+      lightbox.init();
+    };
+    onIdle(loadPhotoswipe);
+  });
 </script>
