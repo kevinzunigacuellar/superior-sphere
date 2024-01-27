@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import logoImg from "~/assets/logo.webp";
 ---
 
-<footer class="bg-stone-900 py-12 px-4">
+<footer class="bg-stone-900 pt-12 px-4">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto max-w-6xl">
     <Image
       class="w-24 mx-auto sm:w-36 h-auto"
@@ -35,7 +35,7 @@ import logoImg from "~/assets/logo.webp";
         {
           socialLinks.map((link) => (
             <li>
-              <a class="hover:text-neutral-300" href={link.href}>
+              <a class="hover:text-stone-300" href={link.href}>
                 {link.name}
               </a>
             </li>
@@ -54,4 +54,13 @@ import logoImg from "~/assets/logo.webp";
       Fri - Sat: 11am - 10:30pm<br />
     </address>
   </div>
+  <p class="text-sm text-stone-400 py-6 max-w-6xl mx-auto">
+    Website built by <a
+      class="underline underline-offset-2 hover:text-amber-400"
+      href="https://www.kevinzunigacuellar.com/">Kevin</a
+    > | <a
+      class="underline underline-offset-2 hover:text-amber-400"
+      href="https://github.com/casarealcvt/website">Source Code</a
+    >
+  </p>
 </footer>
