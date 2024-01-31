@@ -10,7 +10,7 @@ export const defaultMeta = {
 export const socialLinks = [
   {
     name: "Facebook",
-    href: "https://www.facebook.com/CasaRealMexicanRestaurant",
+    href: "https://www.facebook.com/p/Casa-real-Mexican-restaurant-61550264528835/",
   },
   {
     name: "DoorDash",
