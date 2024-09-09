@@ -3,7 +3,7 @@ export const twitter = "@casa_realmexicanarestaurant";
 export const defaultMeta = {
   title: "Casa Real Mexican Restaurant",
   description:
-    "Savor the best Mexican cuisine in Colchester, Vermont at our renowned restaurant. From flavorful tacos to mouthwatering guacamole, our Mexican restaurant delivers an unforgettable culinary experience. Join us for a fiesta of taste and hospitality, making us your go-to destination for the finest Mexican food in Vermont",
+    "Savor the best Mexican food in Colchester, Vermont! From flavorful tacos to fresh guacamole, enjoy an unforgettable culinary experience at our renowned restaurant",
   ogImagePath: "og.png",
 };
 

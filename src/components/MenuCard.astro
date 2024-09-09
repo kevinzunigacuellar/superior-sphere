@@ -28,8 +28,12 @@ const fullSize = await getImage({
     data-pswp-width={fullSize.attributes.width}
   >
     <div
-      class="w-full sm:max-w-40 md:max-w-52 lg:max-w-72 h-auto rounded-md overflow-hidden"
+      class="relative w-full sm:max-w-40 md:max-w-52 lg:max-w-72 h-auto rounded-lg overflow-hidden"
     >
+      <div
+        class="absolute w-full inset-0 bg-stone-950 opacity-0 hover:opacity-25 transition-opacity"
+      >
+      </div>
       <Image
         src={menuImages[imgSrc]()}
         densities={[1.5, 2]}
