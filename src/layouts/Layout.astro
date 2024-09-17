@@ -13,7 +13,7 @@ interface Props {
 const { title = defaultMeta.title, description = defaultMeta.description } =
   Astro.props;
 
-const ogImageURL = new URL(defaultMeta.ogImagePath, Astro.url).href;
+const ogImageURL = new URL(defaultMeta.ogImagePath, Astro.url.origin).href;
 ---
 
 <!doctype html>
