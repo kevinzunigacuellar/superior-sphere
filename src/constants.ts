@@ -185,7 +185,7 @@ export const menu = [
         name: "Nachos supremos",
         description:
           "Toasted corn tortilla chips, covered with a delicious blend of melted cheese, beef, chicken, and beans. Covered with lettuce, tomatoes, and sour cream",
-        imgSrc: "/src/assets/menu/coming_soon.webp",
+        imgSrc: "/src/assets/menu/nachos-supremos.jpeg",
         price: 1450,
       },
       {
@@ -437,7 +437,7 @@ export const menu = [
         name: "Burritos mexicanos",
         description:
           "Two burritos: one chicken and beans and one beef tip and beans. Topped with a mild red sauce, shredded cheese, lettuce, tomato, and sour cream. Served with a side of rice",
-        imgSrc: "/src/assets/menu/coming_soon.webp",
+        imgSrc: "/src/assets/menu/burritos-mexicano.jpeg",
         price: 1325,
       },
       {
@@ -515,7 +515,7 @@ export const menu = [
         name: "Carne asada",
         description:
           "Tender grilled steak, served with rice, beans, cream salad, and three flour or corn tortillas",
-        imgSrc: "/src/assets/menu/coming_soon.webp",
+        imgSrc: "/src/assets/menu/carne-asada.jpeg",
         price: 1699,
       },
       {

@@ -21,6 +21,7 @@ const fullSize = await getImage({
 ---
 
 <li class="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
+  <!-- fullsize image -->
   <a
     id="dish"
     href={fullSize.src}
@@ -34,9 +35,11 @@ const fullSize = await getImage({
         class="absolute w-full inset-0 bg-stone-950 opacity-0 hover:opacity-25 transition-opacity"
       >
       </div>
+      <!-- thumbnail -->
       <Image
         src={menuImages[imgSrc]()}
-        densities={[1.5, 2]}
+        width={450}
+        height={450}
         format="webp"
         decoding="async"
         class="w-full h-full object-cover"
