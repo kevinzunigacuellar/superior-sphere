@@ -3,26 +3,26 @@ import { navLinks } from "~/constants";
 ---
 
 <header
-  class="w-full z-10 text-white"
+  class="z-20 w-full text-white"
   class:list={{
-    "fixed top-0 sticky-animation": Astro.url.pathname === "/",
+    "sticky-animation fixed top-0": Astro.url.pathname === "/",
     "relative bg-stone-900": Astro.url.pathname !== "/",
   }}
 >
-  <div class="flex items-center justify-end p-4 max-w-6xl mx-auto">
-    <nav class="flex gap-2 sm:gap-4 items-center flex-wrap">
+  <div class="mx-auto flex max-w-6xl items-center justify-end p-4">
+    <nav class="flex flex-wrap items-center gap-2 sm:gap-4">
       {
         navLinks.map((link) => (
           <a
             href={link.href}
-            class="font-semibold hover:underline underline-offset-4 px-4 py-1 rounded-md"
+            class="rounded-md px-4 py-1 font-semibold underline-offset-4 hover:underline"
           >
             {link.name}
           </a>
         ))
       }
       <a
-        class="font-semibold hover:bg-amber-300 px-4 py-1 rounded-md text-amber-950 bg-amber-400"
+        class="rounded-md bg-amber-400 px-4 py-1 font-semibold text-amber-950 hover:bg-amber-300"
         href="https://www.foodbooking.com/ordering/restaurant/menu?company_uid=49adb6a9-2b65-4566-b549-cfbf9ca9a76f&restaurant_uid=3514ab58-fda5-4cce-a6ab-9f9dcbd6c7d8"
         >Order Now</a
       >
@@ -38,8 +38,8 @@ import { navLinks } from "~/constants";
 
   @keyframes blur {
     to {
-      @apply bg-stone-900;
-      backdrop-filter: blur(12px);
+      background-color: var(--color-stone-900);
+      backdrop-filter: blur(var(--blur-sm));
     }
   }
 </style>

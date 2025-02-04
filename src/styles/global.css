@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Brygada 1918 Variable", ui-serif, Georgia, Cambria,
+    "Times New Roman", Times, serif;
+}

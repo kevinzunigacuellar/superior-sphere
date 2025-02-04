@@ -1,0 +1,76 @@
+---
+import fajitas from "~/assets/popular/fajitas.webp";
+import sopapilla from "~/assets/popular/sopapilla.webp";
+import enchiladas from "~/assets/popular/enchiladas.webp";
+import { Picture } from "astro:assets";
+
+export const popularDishes = [
+  {
+    title: "Fajitas",
+    href: "/menu#fajitas",
+    img: {
+      src: fajitas,
+      alt: "fajitas on a sizzling plate",
+    },
+  },
+  {
+    title: "Desserts",
+    href: "/menu#desserts",
+    img: {
+      src: sopapilla,
+      alt: "sopapilla",
+    },
+  },
+  {
+    title: "Enchiladas",
+    href: "/menu#enchiladas",
+    img: {
+      src: enchiladas,
+      alt: "two enchiladas in a plate",
+    },
+  },
+];
+---
+
+<section class="bg-white px-4 py-12 md:py-20">
+  <div
+    class="mx-auto flex w-full max-w-6xl flex-col items-center justify-center"
+  >
+    <span
+      class="inline-block rounded-full bg-amber-400 px-3 py-1 text-center text-sm font-semibold tracking-tight text-amber-950"
+      >Popular dishes</span
+    >
+    <h2
+      class="mt-3 text-center text-3xl font-bold tracking-tighter text-pretty md:text-4xl"
+    >
+      Our customer's favorites
+    </h2>
+    <p class="mt-2 max-w-prose text-center text-pretty text-stone-600">
+      Discover the most popular dishes in our restaurant
+    </p>
+    <ul class="mt-6 grid w-full grid-cols-1 gap-8 md:mt-12 md:grid-cols-3">
+      {
+        popularDishes.map((dish) => (
+          <li class="group relative transition-all">
+            <div class="relative h-auto w-full overflow-hidden rounded-md bg-red-200 md:h-96">
+              <Picture
+                class="h-full w-full object-cover object-bottom"
+                src={dish.img.src}
+                formats={["webp", "avif"]}
+                loading="lazy"
+                alt={dish.img.alt}
+              />
+              <div class="absolute inset-0 bg-stone-900 opacity-0 transition-opacity group-hover:opacity-20" />
+            </div>
+            <a
+              class="before:content:'' mt-2 block text-xl font-semibold text-stone-900 group-hover:text-yellow-700 before:absolute before:inset-0 sm:mt-3"
+              href={dish.href}
+            >
+              {dish.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

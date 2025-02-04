@@ -1,23 +1,23 @@
 ---
 import { navLinks, socialLinks } from "~/constants";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import logoImg from "~/assets/logo.webp";
 ---
 
-<footer class="bg-stone-900 pt-12 px-4">
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto max-w-6xl">
-    <Image
-      class="w-24 mx-auto sm:w-36 h-auto"
+<footer class="bg-stone-900 px-4 pt-12">
+  <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-4">
+    <Picture
+      class="mx-auto h-auto w-24 sm:w-36"
       src={logoImg}
       densities={[1.5, 2]}
-      format="webp"
+      formats={["webp", "avif"]}
       loading="lazy"
       decoding="async"
       alt="Casa real logo"
     />
     <div>
-      <h2 class="text-amber-400 font-semibold">Links</h2>
-      <ul class="flex flex-col gap-2 mt-3 text-stone-400">
+      <h2 class="font-semibold text-amber-400">Links</h2>
+      <ul class="mt-3 flex flex-col gap-2 text-stone-400">
         {
           navLinks.map((link) => (
             <li>
@@ -32,11 +32,16 @@ import logoImg from "~/assets/logo.webp";
             Casa Grande
           </a>
         </li>
+        <li>
+          <a class="hover:text-stone-300" href="https://casaaztecavt.com/">
+            Casa Azteca
+          </a>
+        </li>
       </ul>
     </div>
     <div>
-      <h2 class="text-amber-400 font-semibold">Socials</h2>
-      <ul class="flex flex-col gap-2 mt-3 text-stone-400">
+      <h2 class="font-semibold text-amber-400">Socials</h2>
+      <ul class="mt-3 flex flex-col gap-2 text-stone-400">
         {
           socialLinks.map((link) => (
             <li>
@@ -48,18 +53,18 @@ import logoImg from "~/assets/logo.webp";
         }
       </ul>
     </div>
-    <address class="not-italic text-stone-400">
-      <h2 class="text-amber-400 font-semibold mb-3">Address</h2>
+    <address class="text-stone-400 not-italic">
+      <h2 class="mb-3 font-semibold text-amber-400">Address</h2>
       85 South Park Drive<br />
       Colchester, VT 05446<br />
-      <h2 class="text-amber-400 font-semibold mb-3 mt-6">Phone</h2>
+      <h2 class="mt-6 mb-3 font-semibold text-amber-400">Phone</h2>
       +1-802-495-5952<br />
-      <h2 class="text-amber-400 font-semibold mb-3 mt-6">Opening hours</h2>
+      <h2 class="mt-6 mb-3 font-semibold text-amber-400">Opening hours</h2>
       Sun - Thur: 11am - 10pm<br />
       Fri - Sat: 11am - 10:30pm<br />
     </address>
   </div>
-  <p class="text-sm text-stone-400 py-6 max-w-6xl mx-auto">
+  <p class="mx-auto max-w-6xl py-6 text-sm text-stone-400">
     Website built by <a
       class="underline underline-offset-2 hover:text-amber-400"
       href="https://www.kevinzunigacuellar.com/">@kevinzunigacuellar</a
