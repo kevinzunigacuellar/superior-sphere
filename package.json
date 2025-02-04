@@ -17,7 +17,6 @@
     "@fontsource-variable/brygada-1918": "^5.1.2",
     "@tailwindcss/vite": "^4.0.3",
     "astro": "^5.2.4",
-    "photoswipe": "^5.4.4",
     "sharp": "^0.33.5",
     "tailwindcss": "^4.0.3",
     "typescript": "^5.7.3"

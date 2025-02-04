@@ -23,9 +23,6 @@ importers:
       astro:
         specifier: ^5.2.4
         version: 5.2.4(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.1)(typescript@5.7.3)(yaml@2.7.0)
-      photoswipe:
-        specifier: ^5.4.4
-        version: 5.4.4
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
@@ -1406,10 +1403,6 @@ packages:
 
   pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
-
-  photoswipe@5.4.4:
-    resolution: {integrity: sha512-WNFHoKrkZNnvFFhbHL93WDkW3ifwVOXSW3w1UuZZelSmgXpIGiZSNlZJq37rR8YejqME2rHs9EhH9ZvlvFH2NA==}
-    engines: {node: '>= 0.12.0'}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -3623,8 +3616,6 @@ snapshots:
   path-exists@4.0.0: {}
 
   pathe@1.1.2: {}
-
-  photoswipe@5.4.4: {}
 
   picocolors@1.1.1: {}
 
