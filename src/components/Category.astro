@@ -11,7 +11,7 @@ const { slug, title } = Astro.props;
 const collection = await getCollection(slug);
 ---
 
-<section id={slug}>
+<section id={slug} class="scroll-mt-16 sm:scroll-m-4">
   <h2 class="mb-4 text-2xl font-semibold" id={slug}>{title}</h2>
   <ul class="grid grid-cols-1 gap-4">
     {
